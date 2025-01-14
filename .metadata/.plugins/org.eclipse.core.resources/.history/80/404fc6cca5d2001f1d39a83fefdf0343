@@ -1,0 +1,34 @@
+package com.example.demo.dao;
+
+import java.util.List;
+
+import com.example.demo.model.Project;
+import com.example.demo.service.ProjectService;
+
+public class ProjectDao implements ProjectService {
+
+	@Override
+	public List<Project> getProjectList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Project getProjectById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Project addProject(Project pro) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteProject(String id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

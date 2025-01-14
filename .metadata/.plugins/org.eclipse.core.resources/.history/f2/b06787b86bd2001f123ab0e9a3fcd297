@@ -1,0 +1,31 @@
+package com.example.demo.dao;
+
+import java.util.List;
+
+import com.example.demo.model.CompanyInfoModel;
+import com.example.demo.repository.CompanyRepo;
+import com.example.demo.service.CompanyService;
+
+@Service
+public class ComapnyDao implements CompanyService {
+
+	CompanyRepo repo;
+	@Override
+	public List<CompanyInfoModel> getCompanyList() {
+		
+		return repo.findAll();
+	}
+
+	@Override
+	public CompanyInfoModel getCompanyById(String id) {
+		// TODO Auto-generated method stub
+		return repo.findById(id).orElse(null);
+	}
+
+	@Override
+	public CompanyInfoModel addCompany(CompanyInfoModel cmp) {
+		// TODO Auto-generated method stub
+		return repo.save(cmp);
+	}
+
+}

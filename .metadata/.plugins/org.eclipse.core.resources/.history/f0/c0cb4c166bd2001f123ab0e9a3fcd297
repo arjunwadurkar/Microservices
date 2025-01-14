@@ -1,0 +1,28 @@
+package com.example.demo.dao;
+
+import java.util.List;
+
+import com.example.demo.model.CompanyInfoModel;
+import com.example.demo.service.CompanyService;
+
+public class ComapnyDao implements CompanyService {
+
+	@Override
+	public List<CompanyInfoModel> getCompanyList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CompanyInfoModel getCompanyById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addCompany(CompanyInfoModel cmp) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

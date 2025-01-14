@@ -1,0 +1,40 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.CompanyInfoModel;
+import com.example.demo.service.CompanyService;
+
+@RestController
+public class CmpyController {
+	
+	@Autowired
+	CompanyService cs;
+	@GetMapping
+	public String test()
+	{
+		return "Demo";
+	}
+	
+	public List<CompanyInfoModel> getCompanyList(){
+		
+		return cs.getCompanyList();
+	}
+	
+	public CompanyInfoModel getCompanyById(String id)
+	{
+		return cs.getCompanyById(id);
+	}
+	
+	public CompanyInfoModel addComapny(CompanyInfoModel cmp) {
+		cmp.setCid(UUID.randomUUID().toString());
+		
+		return cs.addCompany(cmp);
+	}
+
+}
